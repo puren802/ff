@@ -8,7 +8,7 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
 ?>
 <html lang="en">
 <head>
-  <title>Bit Company Page</title>
+  <title>Bit Company Page1111</title>
 </head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
