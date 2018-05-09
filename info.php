@@ -2,7 +2,7 @@
 
 <?php
 session_start();
-$user=$_SESSION['username'];
+$username=$_SESSION['username'];
 $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
 ?>
 <html lang="en">
@@ -294,8 +294,31 @@ article {
     margin-left: 600px;
 	margin-top: 200px;
 }
- 
-  </style>
+.grid-container {
+  display: grid;
+  align:center;
+  grid-template-columns: 400px 400px 400px 400px;
+  grid-gap: 10px;
+  background-color: #f1f1f1;
+  padding-left: 130px;
+  padding-bottom: 50px;
+  max-width: auto;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+}
+dt{
+	text-align:left;
+}
+dd{
+	text-align:left;
+}
+
+</style>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -313,11 +336,10 @@ article {
     <div class="collapse navbar-collapse" id="myNavbar">
 	
 		<ul class="nav navbar-nav navbar-right">
-		<li><a href="logout.php">LOGOUT</a></li>
 		<div class="dropdown">
-			<button class="dropbtn"><?=$user?>님 환영합니다.</button>
+			<button class="dropbtn"><?=$username?>님 환영합니다.</button>
 			<div class="dropdown-content">
-				<a href="#">Info</a>
+				<a href="info.php">Info</a>
 				<a href="#">My Status</a>
 				<a href="logout.php">Logout</a>
 				</div>
@@ -339,33 +361,62 @@ article {
 </div>
 
 <div class="text-center" style="background-color: #f1f1f1;">
+<br>
   <h3>입출금내역</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+<br>
+<div class="grid-container">
+
+
+<?php
+$result = mysqli_query($con,"SELECT * FROM users where username='$username'");
+$n=1;
+
+$total_rows2 = mysqli_num_rows($result)-2;
+for($total_rows2 = mysqli_num_rows($result)-1; $total_rows2 > 0 ; $total_rows2--){
+	
+	 mysqli_data_seek($result,$total_rows2);
+	 $row2 =mysqli_fetch_array($result);
+	 if($row2['income']!=null){
+		echo "<div style=background-color:cornsilk>"."<dt>".$n."<dd>".$row2['date']."</dd>"."<dd>"."장소"."</dt>".
+		"<dd style=text-align:right>"."<font color=blue>입금".$row2['income'] ."</font>" .
+		"<sub style=color:gray>"."총액".$row2['total']."</sub>"."</dd>"."</div>";
+	
+		}
+		if($row2['spend']!=null){
+			echo "<div style=background-color:powderblue>"."<dt>".$n."<dd>".$row2['date']."</dd>"."<dd>"."장소"."</dt>".
+		"<dd style=text-align:right>"."<font color=red>출금".$row2['spend'] ."</font>" .
+		"<sub style=color:gray>"."총액".$row2['total']."</sub>"."</dd>"."</div>";
+			}
+			$n=$n+1;
+}
+?>
 </div>
+  
+ </div>
 
 <div class="text-center">
   <h3>거래 내역 그래프</h3>
   <?php
-	$db = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
-	$query="SELECT * FROM users";
-	$exec = mysqli_query($db,$query);
+	$query="SELECT * FROM users where username='$username'";
+	$exec = mysqli_query($con,$query);
 	$column = array();
 	$income=0;
 	$spend=0;
 	$total=0;
 	while($row=mysqli_fetch_array($exec)){
+		if($row['income']!=null){
 		$income = $income + $row[7];
+		}
+		if($row['spend']!=null){
 		$spend = $spend + $row[8];
+		}
 	}
 	$total_rows = mysqli_num_rows($exec);
-	$query2="SELECT * FROM users where num='$total_rows'";
-	$exec2 = mysqli_query($db,$query2);
-	while($row=mysqli_fetch_array($exec2)){
-		$total = $row[9];
-		}
+	$total = mysqli_data_seek($exec,$total_rows-1);
+	$row =mysqli_fetch_array($exec);
 
 $data = array(   array('', '금액'),   array('적립액', $income) ,array('기부액', $spend)  );
-$data2 = array(   array('', '금액'),   array('적립액', $income) ,array('기부액', $spend),array('현재금액', $total)  );
+$data2 = array(   array('', '금액'),   array('적립액', $income) ,array('기부액', $spend),array('현재금액', $row['total'])  );
 $options = array(   'title' => ' ',   'width' => 800, 'height' => 800);
 ?>
 <script src="//www.google.com/jsapi"></script>
@@ -408,6 +459,7 @@ google.setOnLoadCallback(function() {
 <div id="chart_div2"></div>
  </article>
 
+ <li><a>
 
 </div>
 

@@ -15,6 +15,7 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
@@ -296,8 +297,8 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#about">ABOUT</a></li>
         <li><a href="#services">SERVICES</a></li>
-        <li><a href="#portfolio">SUPPORT</a></li>
-        <li><a href="#pricing">DONATION</a></li>
+        <li><a href="#support">SUPPORT</a></li>
+        <li><a href="#donation">DONATION</a></li>
         <li><a href="#contact">CONTACT</a></li>
 				<div class="dropdown">
 			<button class="dropbtn"><?=$user?>님 환영합니다.</button>
@@ -381,7 +382,7 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-user logo-small"></span>
       <h4>SNS</h4>
-      <p>publishing whole world with SNS </p>
+      <p>publishing to the whole world with SNS </p>
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-wrench logo-small"></span>
@@ -392,7 +393,7 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
 </div>
 
 <!-- Container (Portfolio Section) -->
-<div id="portfolio" class="container-fluid text-center bg-grey">
+<div id="support" class="container-fluid text-center bg-grey">
   <h2>support</h2><br>
   <!--<h4>What we have created</h4>-->
   <div class="row text-center slideanim">
@@ -431,13 +432,13 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-      <h3>"후원금은 투명하게 쓰여지나요?"</h3><h4>유니세프는 UN기구와 OECD가 가입한 IATI(국제원조투명성 이니셔티브)를 통해 투명하게 기금을 관리하고 있습니다. 또한, 유니세프한국위원회는 공인된 외부회계법인의 정기적인 회계감사를 받습니다. <br> 유니세프는 매년 기금모금 및 사용 내용을 홈페이지에 게시하여 투명하게 사용 내용을 공개하며 유니세프 소식지와 연차 보고를 통해 사업결과 및 지원현황을 알리고 있습니다.</h4>
+      <h3>"후원금은 투명하게 쓰여지나요?"</h3><h4>유니세프는 UN기구와 OECD가 가입한 IATI(국제원조투명성 이니셔티브)를 통해 투명하게 기금을 관리하고 있습니다.<br> 또한, 유니세프한국위원회는 공인된 외부회계법인의 정기적인 회계감사를 받습니다. <br> 유니세프는 매년 기금모금 및 사용 내용을 홈페이지에 게시하여 투명하게 사용 내용을 공개하며 유니세프 소식지와 연차 보고를 통해 사업결과 및 지원현황을 알리고 있습니다.</h4>
       </div>
       <div class="item">
-        <h3>"유니세프는 아프리카 어린이만 돕나요?"</h3><h4>전 세계 34개국에 국가위원회, 155개의 지역사무소가 있으며 190여 개 국가에서 아동들을 돕고 있습니다. <br> 국가위원회는 선진국에 설치된 모금조직으로 개발도상국에서 아동을 위한 사업을 펼칠 수 있도록 기금을 모아 본부에 전달합니다.</h4>
+        <h3>"유니세프는 아프리카 어린이만 돕나요?"</h3><h4>전 세계 34개국에 국가위원회, 155개의 지역사무소가 있으며 190여 개 국가에서 아동들을 돕고 있습니다. <br> 국가위원회는 선진국에 설치된 모금조직으로 개발도상국에서 아동을 위한 사업을 펼칠 수 있도록 기금을 모아 본부에 전달합니다.br>전 세계의 나라들을 포함하여 우리나라에 있는 불우이웃들에게도 도움이 될 수 있도록 최선을 다 하고 있습니다.</h4>
       </div>
       <div class="item">
-        <h3>"유니세프를 통해 1:1 결연 후원이 가능한가요?"</h3><h4>유니세프는 가장 긴급하고 지금 당장 도움이 절실한 아동들에게 후원금이 먼저 사용될 수 있도록 노력하고 있습니다. <br> 1:1 지원이 아닌 유니세프의 사업별 지원 방식은 매년 새로운 자연재해, 전쟁 등으로 먼저 도움이 필요한 지역이 달라지는 상황에서 제한된 후원금을 효율적으로 사용하여 더 많은 어린이에게 혜택을 줄 수 있습니다.</h4>
+        <h3>"유니세프를 통해 1:1 결연 후원이 가능한가요?"</h3><h4>유니세프는 가장 긴급하고 지금 당장 도움이 절실한 아동들에게 후원금이 먼저 사용될 수 있도록 노력하고 있습니다. <br> 1:1 지원이 아닌 유니세프의 사업별 지원 방식은 매년 새로운 자연재해, 전쟁 등으로 먼저 도움이 필요한 지역이<br> 달라지는 상황에서 제한된 후원금을 효율적으로 사용하여 더 많은 어린이에게 혜택을 줄 수 있습니다.</h4>
       </div>
     </div>
 
@@ -454,7 +455,7 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
 </div>
 
 <!-- Container (Pricing Section) -->
-<div id="pricing" class="container-fluid">
+<div id="donation" class="container-fluid">
   <div class="text-center">
     <h2>Donation</h2>
     <h4>Choose a payment plan that works for you</h4>
@@ -463,72 +464,65 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h1>Basic</h1>
+          <h1>A few days</h1>
         </div>
         <div class="panel-body">
-          <p><strong>20</strong> Lorem</p>
-          <p><strong>15</strong> Ipsum</p>
-          <p><strong>5</strong> Dolor</p>
-          <p><strong>2</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
+          <p><i class="fa fa-medkit"></i>&nbsp;<strong>의료</strong> 지원</p>
+          <p><i class="fa fa-home"></i>&nbsp;<strong>생활</strong> 지원</p>
+          <p><span class="glyphicon glyphicon-cutlery"></span>&nbsp;<strong>급식</strong> 지원</p>
         </div>
         <div class="panel-footer">
           <h3>$19</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
+          <button class="btn btn-lg" onclick="document.getElementById('modal-wrapper3').style.display='block'">Check</button>
         </div>
       </div>      
     </div>     
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h1>Pro</h1>
+          <h1>Weeks</h1>
         </div>
         <div class="panel-body">
-          <p><strong>50</strong> Lorem</p>
-          <p><strong>25</strong> Ipsum</p>
-          <p><strong>10</strong> Dolor</p>
-          <p><strong>5</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
+          <p><i class="fa fa-medkit"></i>&nbsp;<strong>의료</strong> 지원</p>
+          <p><i class="fa fa-wheelchair"></i>&nbsp;<strong>재활치료</strong> 지원</p>
+          <p><i class="fa fa-home"></i>&nbsp;<strong>생활</strong> 지원</p>
+          <p><span class="glyphicon glyphicon-cutlery"></span>&nbsp;<strong>급식</strong> 지원</p>
         </div>
         <div class="panel-footer">
           <h3>$29</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
+          <button class="btn btn-lg" onclick="document.getElementById('modal-wrapper4').style.display='block'">Check</button>
         </div>
       </div>      
     </div>       
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h1>Premium</h1>
+          <h1>Months</h1>
         </div>
         <div class="panel-body">
-          <p><strong>100</strong> Lorem</p>
-          <p><strong>50</strong> Ipsum</p>
-          <p><strong>25</strong> Dolor</p>
-          <p><strong>10</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
+          <p><i class="fa fa-medkit"></i>&nbsp;<strong>의료</strong> 지원</p>
+          <p><i class="fa fa-wheelchair"></i>&nbsp;<strong>재활치료</strong> 지원</p>
+          <p><i class="fa fa-home"></i>&nbsp;<strong>생활</strong> 지원</p>
+          <p><span class="glyphicon glyphicon-cutlery"></span>&nbsp;<strong>급식</strong> 지원</p>
+          <p><i class="fa fa-mortar-board"></i>&nbsp;<strong>교육</strong> 지원</p>
         </div>
         <div class="panel-footer">
           <h3>$49</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
+          <button class="btn btn-lg" onclick="document.getElementById('modal-wrapper5').style.display='block'">Check</button>
         </div>
       </div>      
     </div>    
   </div>
 </div>
-
 <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid bg-grey">
   <h2 class="text-center">CONTACT</h2>
   <div class="row">
     <div class="col-sm-5">
       <p>Contact us and we'll get back to you within 24 hours.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
-      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Seong-buk, Seoul</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +82 10-1234-5678</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> dropthebit@hansung.ac.kr</p>
     </div>
     <div class="col-sm-7 slideanim">
       <div class="row">

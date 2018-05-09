@@ -63,9 +63,8 @@ if (isset($_POST['reg_user'])) {
 	  	
 	//	$query = "INSERT INTO users 
   	//		  VALUES(NULL, '$name', NULL, NULL, '$username', '$password', '$email')";		  
-			  
-	$query="INSERT INTO `users` (`num`, `name`, `sex`, `bday`, `username`, `password`, `email`, `income`, `spend`, `total`)
-	VALUES (NULL, '$name', '', NULL, '$username', '$password', '$email', '', '', '');";
+	$query="INSERT INTO `users` (`num`, `name`, `sex`, `bday`, `username`, `password`, `email`, `income`, `spend`, `total`, 
+	`uid`, `date`) VALUES (NULL, '$name', NULL, NULL, '$username', '$password', '$email', '', '', '', '', NULL);";
 			  
   	mysqli_query($db, $query);
   	$_SESSION['username'] = $username;
