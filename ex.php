@@ -545,19 +545,21 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
 
 <div id="modal-wrapper3" class="modal">
 
-  <form class="modal-content animate" method="post">
-        <?php include('errors.php'); ?>
+  <form class="modal-content animate" method="POST" action="login_check.php">
+        
     <div class="imgcontainer">
       <span onclick="document.getElementById('modal-wrapper3').style.display='none'" class="close" 
 	  title="Close PopUp">&times;</span>
-      <h1 style="text-align:center">A few days</h1>
-	  
+      <h1 style="text-align:center">Login</h1>
     </div>
 
     <div class="container">
-	<br>
-	  
+      <input type="text" placeholder="Enter Username" name="username">
+      <input type="password" placeholder="Enter Password" name="password">
+      <button type="submit" name="submit" style="width: 90px; height: 40px; color: white; background-color:#f4511e">Login</button>
 	  <br>
+      <input type="checkbox" style="margin-left:10px"> Remember me
+      <a href="#" style="float:center; margin-left:30px;">Forgot Password ?</a>
     </div>
    
   </form>
@@ -565,21 +567,24 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
 </div>
 
 
+
 <div id="modal-wrapper4" class="modal">
 
-  <form class="modal-content animate" method="post">
-        <?php include('errors.php'); ?>
+  <form class="modal-content animate" method="POST" action="login_check.php">
+        
     <div class="imgcontainer">
       <span onclick="document.getElementById('modal-wrapper4').style.display='none'" class="close" 
 	  title="Close PopUp">&times;</span>
-      <h1 style="text-align:center">Register</h1>
-	  
+      <h1 style="text-align:center">Login</h1>
     </div>
 
     <div class="container">
-	<br>
-	  
+      <input type="text" placeholder="Enter Username" name="username">
+      <input type="password" placeholder="Enter Password" name="password">
+      <button type="submit" name="submit" style="width: 90px; height: 40px; color: white; background-color:#f4511e">Login</button>
 	  <br>
+      <input type="checkbox" style="margin-left:10px"> Remember me
+      <a href="#" style="float:center; margin-left:30px;">Forgot Password ?</a>
     </div>
    
   </form>
@@ -589,25 +594,26 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
 
 <div id="modal-wrapper5" class="modal">
 
-  <form class="modal-content animate" method="post">
-        <?php include('errors.php'); ?>
+  <form class="modal-content animate" method="POST" action="login_check.php">
+        
     <div class="imgcontainer">
       <span onclick="document.getElementById('modal-wrapper5').style.display='none'" class="close" 
 	  title="Close PopUp">&times;</span>
-      <h1 style="text-align:center">Register</h1>
-	  
+      <h1 style="text-align:center">Login</h1>
     </div>
 
     <div class="container">
-	<br>
-	  
+      <input type="text" placeholder="Enter Username" name="username">
+      <input type="password" placeholder="Enter Password" name="password">
+      <button type="submit" name="submit" style="width: 90px; height: 40px; color: white; background-color:#f4511e">Login</button>
 	  <br>
+      <input type="checkbox" style="margin-left:10px"> Remember me
+      <a href="#" style="float:center; margin-left:30px;">Forgot Password ?</a>
     </div>
    
   </form>
   
 </div>
-
 
 
 <!-- Container (Contact Section) -->

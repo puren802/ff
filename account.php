@@ -3,7 +3,6 @@
 <?php
 session_start();
 $username=$_SESSION['username'];
-$_SESSION['ndate']='';
 $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
 ?>
 <html lang="en">
@@ -282,7 +281,6 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
 div.container2 {
     width: 100%;
 	height: 900px;
-    border: 2px solid gray;
 }
 
 section {
@@ -298,19 +296,21 @@ article {
 .grid-container {
   display: grid;
   align:center;
-  grid-template-columns: 400px 400px 400px 400px;
-  grid-gap: 10px;
-  background-color: #f1f1f1;
-  padding-left: 130px;
-  padding-bottom: 50px;
+  grid-template-columns: 400px 400px;
+  grid-gap: 20px;
+  background-color: #ffffff;
+  padding-left: 30%;
+  padding-bottom: 5%;
   max-width: auto;
+  border-bottom: 2px solid red;
 }
 
 .grid-container > div {
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
-  padding: 20px;
+  padding: 4%;
   font-size: 20px;
+   border-bottom:1px solid black
 }
 dt{
 	text-align:left;
@@ -318,14 +318,14 @@ dt{
 dd{
 	text-align:left;
 }
-ul.menu {
+ul.menu{
     list-style-type: none;
-    margin-left: 15%;;
+    margin-left: 15%;
     padding: 0;
     width: 10%;
     background-color: #ffffff;
     position: absolute;
-    height: 100%;
+    height: 50%;
     overflow: auto;
 }
 
@@ -381,9 +381,9 @@ li a:hover:not(.active) {
 </div>
 
 <ul class="menu">
-  <li style="background-color: #f4511e; padding-top:15px"><a style="color: white;">나의 후원 내역</a></li>
+  <li><a href="info.php">나의 후원 내역</a></li>
   <hr style="border:1px solid red; width=90%"> 
-  <li><a href="account.php">계좌 정보</a></li>
+  <li style="background-color: #f4511e;"><a href="account.php">계좌 정보</a></li>
   <hr style="border:1px solid red; width=90%"> 
   <li><a href="#Q&A">Q&A</a></li>
   <hr style="border:1px solid red; width=90%"> 
@@ -391,79 +391,108 @@ li a:hover:not(.active) {
   <hr style="border:1px solid red; width=90%"> 
 </ul>
 
-<div style="margin-left:30%;padding:1px 16px;">
 
+<div class="text-center" style="background-color: #ffffff;">
+
+  <h3>입출금내역</h3>
 <br>
-  <h2 style="color:#f4511e">Drop the bit</h2>
-  <p style="font-size:20px;"><strong>사랑</strong>으로 자라는 아이들.</p>
-  <p style="font-size:20px;">여러분의 <strong>나눔</strong>으로 <strong>희망</strong>을 꿈꿉니다.</p>
-  
-  <div style=" background-color:#f5f5f5; border: 3px solid #f1f1f1; width: 50%;">
-  <table>
-  <tr><td>
-  <p><?=$username?> 후원자님, 환영합니다!</p></td><td><p style="> uid번호:</p></td>
-  </table>
-  </div>
-  <?php
-	$result = mysqli_query($con,"SELECT * FROM users where username='$username'");
+<br>
+<div class="grid-container">
+
+
+<?php
+$result = mysqli_query($con,"SELECT * FROM users where username='$username'");
 $n=1;
-$ndate='';
-$nspend=0;
-$total_rows=mysqli_num_rows($result)-1;
-mysqli_data_seek($result,$total_rows);
-$row2 =mysqli_fetch_array($result);
-do{
-	$nspend=$row2['spend'];
-	mysqli_data_seek($result,$total_rows);
-	$row2 =mysqli_fetch_array($result);
-	$ndate = $row2['date'];
-	$nspend=$row2['spend'];
-	$total_rows=$total_rows-1;
+
+$total_rows2 = mysqli_num_rows($result)-2;
+for($total_rows2 = mysqli_num_rows($result)-1; $total_rows2 > 0 ; $total_rows2--){
+	
+	 mysqli_data_seek($result,$total_rows2);
+	 $row2 =mysqli_fetch_array($result);
+	 if($row2['income']!=0){
+		echo "<div style=background-color:#f1f1f1;>"."<dt>".$n."<dd>".$row2['date']."</dd>"."<dd>"."장소"."</dt>".
+		"<dd style=text-align:right>"."<font color=blue>입금".$row2['income'] ."</font>" .
+		"<sub style=color:gray>"."총액".$row2['total']."</sub>"."</dd>"."</div>";
+	
+		}
+		if($row2['spend']!=0){
+			echo "<div style=background-color:#f1f1f1>"."<dt>".$n."<dd>".$row2['date']."</dd>"."<dd>"."장소"."</dt>".
+		"<dd style=text-align:right>"."<font color=red>출금".$row2['spend'] ."</font>" .
+		"<sub style=color:gray>"."총액".$row2['total']."</sub>"."</dd>"."</div>";
+			}
+			$n=$n+1;
 }
-while($row2['spend']==null);
 ?>
+</div>
   
-  
-  <br>
-  <table>
-  <tr><td  style="border-bottom: 2px dotted red;"><h3 style="color:#f4511e">후원금 내역 </h3></td>
-  <tr>
-    <td style="padding-left:10px; width: 50%; border-bottom:2px solid lightgray; padding-bottom:10px; padding-right:12px; padding-top:12px; text-align:justify">
-	<p style="margin-bottom:-10px;">최근 후원일 :<?=$ndate?></p>
-	</td>
-	<tr>
-	<td style="padding-left:10px; padding-top:12px; padding-bottom:10px; border-bottom:2px solid lightgray; text-align:justify"> <p style="margin-bottom:-10px;">최근 후원 금액:<?=$nspend?></p>
-	</td></tr>
-	<tr>
-	<td style="padding-left:10px; padding-top:12px; padding-bottom:10px; border-bottom:2px solid lightgray; text-align:justify"> <p style="margin-bottom:-10px;">총 후원 금액: 
-	<?php
+ </div>
+ 
+ <div class="text-center">
+  <h3>거래 내역 그래프</h3>
+  <?php
 	$query="SELECT * FROM users where username='$username'";
-	$result = mysqli_query($con,$query);
+	$exec = mysqli_query($con,$query);
+	$income=0;
+	$spend=0;
 	$total=0;
-	while($row=mysqli_fetch_array($result)){
+	while($row=mysqli_fetch_array($exec)){
+		if($row['income']!=null){
+		$income = $income + $row[7];
+		}
 		if($row['spend']!=null){
-		$total = $total + $row[8];
+		$spend = $spend + $row[8];
 		}
 	}
-	echo $total;
-?>
-	</td></p></tr>
-  </tr></tr>
-  </ul>
-</table>
-  <br>
-  <div style="border: 1px solid #f4511e; width: 50%;">
-  <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
-  <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p>
-  <p>Some text..</p>
-  <p>Some text..</p>
-  <p>Some text..</p>
-  <p>Some text..</p>
-  <p>Some text..</p>
-  <p>Some text..</p>
-  <p>Some text..</p>
-</div>
+	$total_rows = mysqli_num_rows($exec);
+	$total = mysqli_data_seek($exec,$total_rows-1);
+	$row =mysqli_fetch_array($exec);
 
+$data = array(   array('', '금액'),   array('적립액', $income) ,array('기부액', $spend)  );
+$data2 = array(   array('', '금액'),   array('적립액', $income) ,array('기부액', $spend),array('현재금액', $row['total'])  );
+$options = array(   'title' => ' ',   'width' => 800, 'height' => 800);
+?>
+<script src="//www.google.com/jsapi"></script>
+<script>
+var data = <?= json_encode($data) ?>;
+var data2 = <?= json_encode($data2) ?>;
+var options = <?= json_encode($options) ?>;
+
+
+var options2 = {
+        title: ' ',
+        chartArea: {width: '50%'},
+        hAxis: {
+          title: '내역',
+          minValue: 0
+        },
+        vAxis: {
+          title: ''
+        }
+      };
+	  
+google.load('visualization', '1.0', {'packages':['corechart']});
+google.setOnLoadCallback(function() {
+  var chart = new google.visualization.PieChart(document.querySelector('#chart_div'));
+  var chart2 = new google.visualization.BarChart(document.querySelector('#chart_div2'));
+  
+  chart.draw(google.visualization.arrayToDataTable(data),options);
+  chart2.draw(google.visualization.arrayToDataTable(data2),options2);
+});
+</script>
+
+
+<div class="container2">
+
+<section>
+<a id="chart_div"></a>
+</section>
+
+<article class="container2.article2">
+<div id="chart_div2"></div>
+ </article>
+
+</div>
+ 
 
 <script>
 $(document).ready(function(){

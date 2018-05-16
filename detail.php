@@ -295,20 +295,22 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
       </button>
       <a class="navbar-brand" href="members.php">Drop the Bit</a>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
 	
-		<ul class="nav navbar-nav navbar-right">
-		<li><a href="logout.php">LOGOUT</a></li>
-		<div class="dropdown">
-			<button class="dropbtn"><?=$user?>님 환영합니다.</button>
-			<div class="dropdown-content">
-				<a href="info.php">Info</a>
-				<a href="#">My Status</a>
-				<a href="logout.php">Logout</a>
-				</div>
-		</div>
-		</ul>
-    </div>
+	<script>
+//    <div class="collapse navbar-collapse" id="myNavbar">
+	
+//		<ul class="nav navbar-nav navbar-right">
+//		<li><a href="logout.php">LOGOUT</a></li>
+//		<div class="dropdown">
+//			<button class="dropbtn"><?=$user?>님 환영합니다.</button>
+//			<div class="dropdown-content">
+//				<a href="info.php">Info</a>
+//				<a href="#">My Status</a>
+//				<a href="logout.php">Logout</a>
+//				</div>
+//		</div>
+//		</ul>
+//   </div></script>
   </div>
 </nav>
 

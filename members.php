@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <?php
@@ -8,7 +7,7 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
 ?>
 <html lang="en">
 <head>
-  <title>Bit Company Page1111</title>
+  <title>Bit Company Page</title>
 </head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -278,8 +277,7 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
 	color: orange;
 } 
 
-  
-  </style>
+</style>
   
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
@@ -513,6 +511,100 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
       </div>      
     </div>    
   </div>
+</div>
+
+
+
+<div id="modal-wrapper3" class="modal" >
+  <form class="modal-content animate" method="post" action="insert.php" style="text-align:center;>        
+      <div class="imgcontainer">	
+	  <span onclick="document.getElementById('modal-wrapper3').style.display='none'" class="close" 
+	  title="Close PopUp">&times;</span>
+      <h1 style="text-align:center">A few days</h1>	  
+		<script type="text/javascript">
+		function button_event(){
+		var check = confirm("기부하시겠습니까?");
+		if (check == true){    //확인
+		}else{   //취소
+			return;
+			}
+		}
+		</script>
+		
+			2차 비밀번호 :
+			<input type='text' name='uid' style="text-align:center; width:160px; height:10px; letter-spacing: 0px"><br>			
+			 donation :			
+			<select id="dona" name="price">                      
+			  <option value="0">--select donation--</option>
+			  <option value="100">100원</option>
+			  <option value="500">500원</option>
+			  <option value="1000">1000원</option>				  
+			  <option value="2000">2000원</option>				  
+			</select><br>
+			<input type='submit' onclick="button_event();" value="DONATION" >  		<br>
+</form>  
+</div>
+		
+<div id="modal-wrapper4" class="modal" >
+  <form class="modal-content animate" method="post" action="insert.php" style="text-align:center;>        
+      <div class="imgcontainer">	
+	  <span onclick="document.getElementById('modal-wrapper4').style.display='none'" class="close" 
+	  title="Close PopUp">&times;</span>
+      <h1 style="text-align:center">A few days</h1>	  
+		<script type="text/javascript">
+		function button_event(){
+		var check = confirm("기부하시겠습니까?");
+		if (check == true){    //확인
+		}else{   //취소
+			return;
+			}
+		}
+		</script>
+		
+			2차 비밀번호 :
+			<input type='text' name='uid' style="text-align:center; width:160px; height:10px; letter-spacing: 0px"><br>			
+			 donation :			
+			<select id="dona" name="price">                      
+			  <option value="0">--select donation--</option>
+			  <option value="100">100원</option>
+			  <option value="500">500원</option>
+			  <option value="1000">1000원</option>				  
+			  <option value="2000">2000원</option>				  
+			</select><br>
+			<input type='submit' onclick="button_event();" value="DONATION" >  		<br>
+</form>  
+</div>
+
+
+
+<div id="modal-wrapper5" class="modal" >
+  <form class="modal-content animate" method="post" action="insert.php" style="text-align:center;>        
+      <div class="imgcontainer">	
+	  <span onclick="document.getElementById('modal-wrapper5').style.display='none'" class="close" 
+	  title="Close PopUp">&times;</span>
+      <h1 style="text-align:center">A few days</h1>	  
+		<script type="text/javascript">
+		function button_event(){
+		var check = confirm("기부하시겠습니까?");
+		if (check == true){    //확인
+		}else{   //취소
+			return;
+			}
+		}
+		</script>
+		
+			2차 비밀번호 :
+			<input type='text' name='uid' style="text-align:center; width:160px; height:10px; letter-spacing: 0px"><br>			
+			 donation :			
+			<select id="dona" name="price">                      
+			  <option value="0">--select donation--</option>
+			  <option value="100">100원</option>
+			  <option value="500">500원</option>
+			  <option value="1000">1000원</option>				  
+			  <option value="2000">2000원</option>				  
+			</select><br>
+			<input type='submit' onclick="button_event();" value="DONATION" >  		<br>
+</form>  
 </div>
 <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid bg-grey">
