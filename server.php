@@ -14,7 +14,7 @@ $db = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
 if (isset($_POST['reg_user'])) {
   // receive all input values from the form
   $name = mysqli_real_escape_string($db, $_POST['name']);
-  $bday = mysqli_real_escape_string($db, $_POST['bday']);
+  $uid = mysqli_real_escape_string($db, $_POST['uid']);
   $username = mysqli_real_escape_string($db, $_POST['username']);
   $email = mysqli_real_escape_string($db, $_POST['email']);
   $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
@@ -22,7 +22,7 @@ if (isset($_POST['reg_user'])) {
 
   // form validation: ensure that the form is correctly filled ...
   // by adding (array_push()) corresponding error unto $errors array
-  if (empty($name) || empty($username) || empty($password_1) || empty($password_2) || empty($email) ) {
+  if ( empty($uid) || empty($name) || empty($username) || empty($password_1) || empty($password_2) || empty($email) ) {
 	  echo "<script>alert(\"빈칸을 채워 주세요.\");
 	  window.location.replace('ex.php')
 	  </script>";
@@ -63,9 +63,8 @@ if (isset($_POST['reg_user'])) {
 	  	
 	//	$query = "INSERT INTO users 
   	//		  VALUES(NULL, '$name', NULL, NULL, '$username', '$password', '$email')";		  
-	$query="INSERT INTO `users` (`num`, `name`, `sex`, `bday`, `username`, `password`, `email`, `income`, `spend`, `total`, 
-	`uid`, `date`) VALUES (NULL, '$name', NULL, NULL, '$username', '$password', '$email', '', '', '', '', NULL);";
-			  
+	$query="INSERT INTO `user` (`uid`, `name`, `password`, `email`, `username`) 
+	VALUES ('$uid', '$name', '$password_1', '$email', '$username')";
   	mysqli_query($db, $query);
   	$_SESSION['username'] = $username;
   	$_SESSION['success'] = "You are now logged in";

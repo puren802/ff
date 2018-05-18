@@ -322,16 +322,8 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
 
 
 <div class="text-center">
-  <h3>process1</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <img src="flow.jpg" alt="FLOW" width="1500" height="800">
 </div>
-
-
-<div class="text-center" style="background-color: #f1f1f1;">
-  <h3>process2</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-</div>
-
 
 <script>
 $(document).ready(function(){

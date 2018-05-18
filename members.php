@@ -522,14 +522,16 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
 	  title="Close PopUp">&times;</span>
       <h1 style="text-align:center">A few days</h1>	  
 		<script type="text/javascript">
-		function button_event(){
-		var check = confirm("기부하시겠습니까?");
-		if (check == true){    //확인
-		}else{   //취소
-			return;
-			}
-		}
-		</script>
+<!--
+function button_event(){
+if (confirm("기부하시겠습니까??") == true){    //확인
+    document.form.submit();
+}else{   //취소
+    return;
+}
+}
+//-->
+</script>
 		
 			2차 비밀번호 :
 			<input type='text' name='uid' style="text-align:center; width:160px; height:10px; letter-spacing: 0px"><br>			
@@ -552,15 +554,16 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
 	  title="Close PopUp">&times;</span>
       <h1 style="text-align:center">A few days</h1>	  
 		<script type="text/javascript">
-		function button_event(){
-		var check = confirm("기부하시겠습니까?");
-		if (check == true){    //확인
-		}else{   //취소
-			return;
-			}
-		}
-		</script>
-		
+<!--
+function button_event(){
+if (confirm("기부하시겠습니까??") == true){    //확인
+    location.href='insert.php'
+}else{   //취소
+    location.href='members.php'
+}
+}
+//-->
+</script>
 			2차 비밀번호 :
 			<input type='text' name='uid' style="text-align:center; width:160px; height:10px; letter-spacing: 0px"><br>			
 			 donation :			
@@ -578,20 +581,21 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
 
 
 <div id="modal-wrapper5" class="modal" >
-  <form class="modal-content animate" method="post" action="insert.php" style="text-align:center;>        
+  <form class="modal-content animate" method="post" style="text-align:center;>        
       <div class="imgcontainer">	
 	  <span onclick="document.getElementById('modal-wrapper5').style.display='none'" class="close" 
 	  title="Close PopUp">&times;</span>
       <h1 style="text-align:center">A few days</h1>	  
 		<script type="text/javascript">
-		function button_event(){
-		var check = confirm("기부하시겠습니까?");
-		if (check == true){    //확인
-		}else{   //취소
-			return;
-			}
-		}
-		</script>
+<!--
+function button_event(){
+if (confirm("기부하시겠습니까??") == true){    //확인
+}else{   //취소
+    return;
+}
+}
+//-->
+</script>
 		
 			2차 비밀번호 :
 			<input type='text' name='uid' style="text-align:center; width:160px; height:10px; letter-spacing: 0px"><br>			

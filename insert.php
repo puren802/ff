@@ -33,8 +33,9 @@
 
 		if($pre_total - $Price >= 0){
 			mysqli_query($con,$mysql_qry2);
-			echo "<script>alert('기부 완료!');</script>";
-			header("Location:members.php#donation");
+			echo "<script>alert('기부 완료!');
+			window.location.replace('members.php');
+			</script>";
 		}
 		else {
 			echo "<script>alert('금액이 부족합니다!');
