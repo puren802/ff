@@ -413,10 +413,10 @@ for($total_rows2 = mysqli_num_rows($result)-1; $total_rows2 > 0 ; $total_rows2--
 		echo "<div style=background-color:#f1f1f1;>"."<dt>".$n."<dd>".$row2['date']."</dd>"."<dd>"."장소"."</dt>".
 		"<dd style=text-align:right>"."<font color=blue>입금".$row2['income'] ."</font>" .
 		"<sub style=color:gray>"."총액".$row2['total']."</sub>"."</dd>"."</div>";
-	
 		}
 		if($row2['spend']!=0){
-			echo "<div style=background-color:#f1f1f1>"."<dt>".$n."<dd>".$row2['date']."</dd>"."<dd>"."장소"."</dt>".
+			echo "<div style=background-color:#f1f1f1>"."<dt>".$n."<dd>".$row2['date'].
+			"</dd>"."<dd>"."장소"."</dd>"."<dd>".$row2['location']."</dd>"."</dt>".
 		"<dd style=text-align:right>"."<font color=red>출금".$row2['spend'] ."</font>" .
 		"<sub style=color:gray>"."총액".$row2['total']."</sub>"."</dd>"."</div>";
 			}

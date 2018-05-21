@@ -102,7 +102,7 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
   }
   .panel-heading {
       color: #fff !important;
-      background-color: #f4511e !important;
+      background-color: #ffffff !important;
       padding: 25px;
       border-bottom: 1px solid transparent;
       border-top-left-radius: 0px;
@@ -433,7 +433,7 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
       <h3>"후원금은 투명하게 쓰여지나요?"</h3><h4>유니세프는 UN기구와 OECD가 가입한 IATI(국제원조투명성 이니셔티브)를 통해 투명하게 기금을 관리하고 있습니다.<br> 또한, 유니세프한국위원회는 공인된 외부회계법인의 정기적인 회계감사를 받습니다. <br> 유니세프는 매년 기금모금 및 사용 내용을 홈페이지에 게시하여 투명하게 사용 내용을 공개하며 유니세프 소식지와 연차 보고를 통해 사업결과 및 지원현황을 알리고 있습니다.</h4>
       </div>
       <div class="item">
-        <h3>"유니세프는 아프리카 어린이만 돕나요?"</h3><h4>전 세계 34개국에 국가위원회, 155개의 지역사무소가 있으며 190여 개 국가에서 아동들을 돕고 있습니다. <br> 국가위원회는 선진국에 설치된 모금조직으로 개발도상국에서 아동을 위한 사업을 펼칠 수 있도록 기금을 모아 본부에 전달합니다.br>전 세계의 나라들을 포함하여 우리나라에 있는 불우이웃들에게도 도움이 될 수 있도록 최선을 다 하고 있습니다.</h4>
+        <h3>"유니세프는 아프리카 어린이만 돕나요?"</h3><h4>전 세계 34개국에 국가위원회, 155개의 지역사무소가 있으며 190여 개 국가에서 아동들을 돕고 있습니다. <br> 국가위원회는 선진국에 설치된 모금조직으로 개발도상국에서 아동을 위한 사업을 펼칠 수 있도록 기금을 모아 본부에 전달합니다.<br>전 세계의 나라들을 포함하여 우리나라에 있는 불우이웃들에게도 도움이 될 수 있도록 최선을 다 하고 있습니다.</h4>
       </div>
       <div class="item">
         <h3>"유니세프를 통해 1:1 결연 후원이 가능한가요?"</h3><h4>유니세프는 가장 긴급하고 지금 당장 도움이 절실한 아동들에게 후원금이 먼저 사용될 수 있도록 노력하고 있습니다. <br> 1:1 지원이 아닌 유니세프의 사업별 지원 방식은 매년 새로운 자연재해, 전쟁 등으로 먼저 도움이 필요한 지역이<br> 달라지는 상황에서 제한된 후원금을 효율적으로 사용하여 더 많은 어린이에게 혜택을 줄 수 있습니다.</h4>
@@ -462,15 +462,25 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h1>A few days</h1>
+          <img src="unicef.png">
         </div>
         <div class="panel-body">
-          <p><i class="fa fa-medkit"></i>&nbsp;<strong>의료</strong> 지원</p>
-          <p><i class="fa fa-home"></i>&nbsp;<strong>생활</strong> 지원</p>
-          <p><span class="glyphicon glyphicon-cutlery"></span>&nbsp;<strong>급식</strong> 지원</p>
+          <p>어린이를 위한 유니세프 사업전략 <br>
+         유니세프는 어린이가 살기 좋은 세상을 만들기 위해<br>
+다음 7가지 사업분야에 중점을 두고 사업을 펼쳐 나갑니다.<br><br>
+<strong><i class="fa fa-medkit"></i>&nbsp; 보건사업전개</strong><br>
+<strong><span class="glyphicon glyphicon-leaf"></span>&nbsp; 에이즈 감염 감소</strong><br>
+<strong><i class="fa fa-tint"></i>&nbsp; 식수와 위생 개선</strong><br>
+<strong><span class="glyphicon glyphicon-cutlery"></span>&nbsp; 영양 실조율 감소</strong><br>
+<strong><span class="glyphicon glyphicon-education"></span>&nbsp;교육 환경 개선</strong><br>
+<strong><span class="glyphicon glyphicon-user"></span>어린이 보호</strong><br>
+<strong><i class="fa fa-universal-access"></i>&nbsp; 사회통합</strong><br>      
+         </p>
+  <a href="http://www.unicef.or.kr/">http://www.unicef.or.kr/</a>
+
         </div>
         <div class="panel-footer">
-          <h3>$19</h3>
+          <h3>후원하기</h3>
           <button class="btn btn-lg" onclick="document.getElementById('modal-wrapper3').style.display='block'">Check</button>
         </div>
       </div>      
@@ -478,16 +488,24 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h1>Weeks</h1>
+          <img src="world_vision_logo.png" width="150px" height="50px"/>
         </div>
         <div class="panel-body">
-          <p><i class="fa fa-medkit"></i>&nbsp;<strong>의료</strong> 지원</p>
-          <p><i class="fa fa-wheelchair"></i>&nbsp;<strong>재활치료</strong> 지원</p>
-          <p><i class="fa fa-home"></i>&nbsp;<strong>생활</strong> 지원</p>
-          <p><span class="glyphicon glyphicon-cutlery"></span>&nbsp;<strong>급식</strong> 지원</p>
+        <p>월드비전은 전세계 가장 취약한 아동,가정,지역사회가<br>
+		빈곤과 불평등에서 벗어나도록 하나님의 사랑을 실천하고 <br>
+		모든 파트너와 함께 지속 가능한 변화를 만들어가는 글로벌 NGO입니다<br><br>
+
+      3대 사업을 중심으로 일합니다.<br>
+      <strong><span class="glyphicon glyphicon-wrench"></span>&nbsp;지역개발사업</strong> <br>
+      <strong><i class="fa fa-medkit"></i>&nbsp;국제구호사업</strong>  <br>
+      <strong><span class="glyphicon glyphicon-education"></span>&nbsp;옹호사업</strong>
+
+      </p>
+      <a href="http://www.worldvision.or.kr/index.asp">http://www.worldvision.or.kr/index.asp</a>
+
         </div>
         <div class="panel-footer">
-          <h3>$29</h3>
+          <h3>후원하기</h3>
           <button class="btn btn-lg" onclick="document.getElementById('modal-wrapper4').style.display='block'">Check</button>
         </div>
       </div>      
@@ -495,17 +513,24 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h1>Months</h1>
+         <img src="goodneighbors.png"/>
         </div>
         <div class="panel-body">
-          <p><i class="fa fa-medkit"></i>&nbsp;<strong>의료</strong> 지원</p>
-          <p><i class="fa fa-wheelchair"></i>&nbsp;<strong>재활치료</strong> 지원</p>
-          <p><i class="fa fa-home"></i>&nbsp;<strong>생활</strong> 지원</p>
-          <p><span class="glyphicon glyphicon-cutlery"></span>&nbsp;<strong>급식</strong> 지원</p>
-          <p><i class="fa fa-mortar-board"></i>&nbsp;<strong>교육</strong> 지원</p>
+          <p>굿네이버스는 총 35개국 191개 지역에서<br>
+		  지역개발사업(CDP, Community Development Project)을 지원하고 있습니다.<br>
+         굿네이버스는 1991년 한국에서 설립된 대한민국 토종 NGO입니다.<br>
+         8명의 창립멤버와 128명의 정회원으로 시작해, 현재 국내 52개 지부, 
+		 <br>해외 38개국에서 세상을 위한 좋은 변화를 만들어 나가고 있습니다.<br>
+         <br>
+         <strong><span class="glyphicon glyphicon-leaf"></span>&nbsp;국내복지사업</strong><br>
+         <strong><i class="fa fa-medkit"></i>&nbsp;국제구호개발사업</strong><br>
+         <strong><span class="glyphicon glyphicon-education"></span>&nbsp;사회개발교육사업</strong><br>   
+		</p>
+         <a href="http://www.goodneighbors.kr/">http://www.goodneighbors.kr/</a>
+
         </div>
         <div class="panel-footer">
-          <h3>$49</h3>
+          <h3>후원하기</h3>
           <button class="btn btn-lg" onclick="document.getElementById('modal-wrapper5').style.display='block'">Check</button>
         </div>
       </div>      
@@ -514,45 +539,13 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
 </div>
 
 
-
 <div id="modal-wrapper3" class="modal" >
-  <form class="modal-content animate" method="post" action="insert.php" style="text-align:center;>        
-      <div class="imgcontainer">	
-	  <span onclick="document.getElementById('modal-wrapper3').style.display='none'" class="close" 
-	  title="Close PopUp">&times;</span>
-      <h1 style="text-align:center">A few days</h1>	  
-		<script type="text/javascript">
-<!--
-function button_event(){
-if (confirm("기부하시겠습니까??") == true){    //확인
-    document.form.submit();
-}else{   //취소
-    return;
-}
-}
-//-->
-</script>
-		
-			2차 비밀번호 :
-			<input type='text' name='uid' style="text-align:center; width:160px; height:10px; letter-spacing: 0px"><br>			
-			 donation :			
-			<select id="dona" name="price">                      
-			  <option value="0">--select donation--</option>
-			  <option value="100">100원</option>
-			  <option value="500">500원</option>
-			  <option value="1000">1000원</option>				  
-			  <option value="2000">2000원</option>				  
-			</select><br>
-			<input type='submit' onclick="button_event();" value="DONATION" >  		<br>
-</form>  
-</div>
-		
-<div id="modal-wrapper4" class="modal" >
-  <form class="modal-content animate" method="post" action="insert.php" style="text-align:center;>        
-      <div class="imgcontainer">	
-	  <span onclick="document.getElementById('modal-wrapper4').style.display='none'" class="close" 
-	  title="Close PopUp">&times;</span>
-      <h1 style="text-align:center">A few days</h1>	  
+  <form class="modal-content animate" method="post" action="insert.php" style="text-align:center;">        
+         <span onclick="document.getElementById('modal-wrapper3').style.display='none'" class="close" 
+     title="Close PopUp">&times;</span>
+      <div class="modal-header">
+	  <img src="unicef.png" /> <br>
+	  </div>
 		<script type="text/javascript">
 <!--
 function button_event(){
@@ -564,6 +557,73 @@ if (confirm("기부하시겠습니까??") == true){    //확인
 }
 //-->
 </script>
+	<div class="modal-body">
+	<h3> 아이템을 선택해 주세요 </h3>
+		<input type="radio" name="item" id="item1" value="1" onclick="itemFunction()"> 국제보건사업  &nbsp;&nbsp;&nbsp;
+ 		<input type="radio" name="item" id="item2" value="2" onclick="itemFunction()"> 국제교육사업  &nbsp;&nbsp;&nbsp;
+		<input type="radio" name="item" id="item3" value="3" onclick="itemFunction()"> 국제식수사업 <br><hr>
+		<dl id="1" style="text-align:right; display:none">
+			<dt>기초 보건 시스템 강화</dt>
+			<dd>- 각국 정부에게 기술 및 재정전략 지원, 필수 의료장비 지원, 보건인력 훈련 지원 등</dd>
+			<dt>예방접종 사업</dt>
+			<dd>- 홍역, 소아마비, 풍진, 파상풍을 근절하기 위해 백신을 보급하고<br> 1회용 안전주사기와 백신보관용 냉장고 지원</dd>
+		</dl>
+		<img src="item1-1.jpg" id="image1" style="display:none">
+		
+		<dl id="2" style="text-align:right; display:none">
+			<dt>전 세계 약 12만 명의 어린이들이 에이즈 관련 질병으로 사망하였습니다.</dt>
+			<dd>- 에이즈는 아프리카 청소년들의 사망원인 1위이며</dd>
+			<dd>- 전 세계 청소년의 사망원인 2위입니다. </dd>
+			<dt>감염 예방 방지</dt>
+			<dd>- HIV에 감염된 임산부와 수유부의 76%가 적절한 치료•예방 프로그램을 제공받았습니다.</dd>
+		</dl>
+		<img src="item1-2.jpg" id="image2" style="display:none">
+		
+		<dl id="3" style="text-align:right; display:none">
+			<dt>안전하지 못한 식수는 어린이들의 생존과 건강에 위협이 됩니다.</dt>
+			<dd>- 설사병과 전염병, 기생충으로 인한 질병의 위험에 노출되어 있습니다.</dd>
+			<dd>- 성장에 큰 손실을 주며 발육부진의 원인이 됩니다. </dd>
+			<dt>안전한 식수 공급</dt>
+			<dd>- 유니세프는 더 많은 사람들이 안전한 식수에 접근할 수 있게끔 안전한 <br>수자원을 찾아서 우물과 펌프를 보급하고 있습니다.</dd>
+		</dl>
+		<img src="item1-3.jpg" id="image3" style="display:none">
+		
+<script>
+function itemFunction(){
+    var radio1 = document.getElementById("item1"); //input id로
+    var radio2 = document.getElementById("item2"); //input id로
+    var radio3 = document.getElementById("item3"); //input id로
+	var image1 = document.getElementById("image1");
+	var image2 = document.getElementById("image2");
+	var image3 = document.getElementById("image3");
+    var text1 = document.getElementById("1"); //p id로
+    var text2 = document.getElementById("2"); //p id로
+    var text3 = document.getElementById("3"); //p id로
+    if (radio1.checked == true){
+        text1.style.display = "block";
+		text2.style.display = "none";
+		text3.style.display = "none";
+        image1.style.display = "block";
+		image2.style.display = "none";
+		image3.style.display = "none";
+    } if (radio2.checked == true) {
+        text2.style.display = "block";
+		text1.style.display = "none";
+		text3.style.display = "none";
+		image1.style.display = "none";
+		image2.style.display = "block";
+		image3.style.display = "none";
+    } if (radio3.checked==true) {
+        text3.style.display = "block";
+		text1.style.display = "none";
+		text2.style.display = "none";
+		image1.style.display = "none";
+		image2.style.display = "none";
+		image3.style.display = "block";
+	}
+}
+</script>
+<hr>
 			2차 비밀번호 :
 			<input type='text' name='uid' style="text-align:center; width:160px; height:10px; letter-spacing: 0px"><br>			
 			 donation :			
@@ -574,40 +634,218 @@ if (confirm("기부하시겠습니까??") == true){    //확인
 			  <option value="1000">1000원</option>				  
 			  <option value="2000">2000원</option>				  
 			</select><br>
+	</div>
+	<div class="modal-footer">
+			<input type='submit' onclick="button_event();" value="DONATION" >  <br>
+	</div>
+</form>
+</div>
+		
+
+		<!--
+		4번 5번 아이템 text정리
+		-->
+		
+		
+<div id="modal-wrapper4" class="modal" >
+  <form class="modal-content animate" method="post" action="insert.php" style="text-align:center;">        	
+	    <span onclick="document.getElementById('modal-wrapper4').style.display='none'" class="close" 
+     title="Close PopUp">&times;</span>
+      <div class="modal-header">
+	  <img src="world_vision_logo.png" width="150px" height="50px" />  <br>
+	  </div>
+		<script type="text/javascript">
+<!--
+function button_event(){
+if (confirm("기부하시겠습니까??") == true){    //확인
+    location.href='insert.php'
+}else{   //취소
+    location.href='members.php'
+}
+}
+//-->
+</script>
+	<div class="modal-body">
+	<h3> 아이템을 선택해 주세요 </h3>
+		<input type="radio" name="item" id="item4" value="4" onclick="itemFunction2()"> 국내위기가정아동지원 &nbsp;&nbsp;&nbsp;
+		<input type="radio" name="item" id="item5" value="5" onclick="itemFunction2()"> 대북농업사업 &nbsp;&nbsp;&nbsp;
+		<input type="radio" name="item" id="item6" value="6" onclick="itemFunction2()"> 국제식량위기대응사업 <br>
+		<dl id="4" style="text-align:right; display:none">
+			<dt>기초 보건 시스템 강화</dt>
+			<dd>- 각국 정부에게 기술 및 재정전략 지원, 필수 의료장비 지원, 보건인력 훈련 지원 등</dd>
+			<dt>예방접종 사업</dt>
+			<dd>- 홍역, 소아마비, 풍진, 파상풍을 근절하기 위해 백신을 보급하고<br> 1회용 안전주사기와 백신보관용 냉장고 지원</dd>
+		</dl>
+		<img src="item2-1.jpg" id="image4" style="display:none">
+		
+		<dl id="5" style="text-align:right; display:none">
+			<dt>전 세계 약 12만 명의 어린이들이 에이즈 관련 질병으로 사망하였습니다.</dt>
+			<dd>- 에이즈는 아프리카 청소년들의 사망원인 1위이며</dd>
+			<dd>- 전 세계 청소년의 사망원인 2위입니다. </dd>
+			<dt>감염 예방 방지</dt>
+			<dd>- HIV에 감염된 임산부와 수유부의 76%가 적절한 치료•예방 프로그램을 제공받았습니다.</dd>
+		</dl>
+		<img src="item2-2.jpg" id="image5" style="display:none">
+		
+		<dl id="6" style="text-align:right; display:none">
+			<dt>안전하지 못한 식수는 어린이들의 생존과 건강에 위협이 됩니다.</dt>
+			<dd>- 설사병과 전염병, 기생충으로 인한 질병의 위험에 노출되어 있습니다.</dd>
+			<dd>- 성장에 큰 손실을 주며 발육부진의 원인이 됩니다. </dd>
+			<dt>안전한 식수 공급</dt>
+			<dd>- 유니세프는 더 많은 사람들이 안전한 식수에 접근할 수 있게끔 안전한 <br>수자원을 찾아서 우물과 펌프를 보급하고 있습니다.</dd>
+		</dl>
+		<img src="item2-3.jpg" id="image6" style="display:none">
+<script>
+function itemFunction2(){
+    var radio1 = document.getElementById("item4"); //input id로
+    var radio2 = document.getElementById("item5"); //input id로
+    var radio3 = document.getElementById("item6"); //input id로
+	var image1 = document.getElementById("image4");
+	var image2 = document.getElementById("image5");
+	var image3 = document.getElementById("image6");
+    var text1 = document.getElementById("4"); //p id로
+    var text2 = document.getElementById("5"); //p id로
+    var text3 = document.getElementById("6"); //p id로
+    if (radio1.checked == true){
+        text1.style.display = "block";
+		text2.style.display = "none";
+		text3.style.display = "none";
+		image1.style.display = "block";
+		image2.style.display = "none";
+		image3.style.display = "none";
+    } if (radio2.checked == true) {
+        text2.style.display = "block";
+		text1.style.display = "none";
+		text3.style.display = "none";
+		image1.style.display = "none";
+		image2.style.display = "block";
+		image3.style.display = "none";
+    } if (radio3.checked==true) {
+        text3.style.display = "block";
+		text1.style.display = "none";
+		text2.style.display = "none";
+		image1.style.display = "none";
+		image2.style.display = "none";
+		image3.style.display = "block";
+	}
+}
+</script>
+			2차 비밀번호 :
+			<input type='text' name='uid' style="text-align:center; width:160px; height:10px; letter-spacing: 0px"><br>			
+			 donation :			
+			<select id="dona" name="price">                      
+			  <option value="0">--select donation--</option>
+			  <option value="100">100원</option>
+			  <option value="500">500원</option>
+			  <option value="1000">1000원</option>				  
+			  <option value="2000">2000원</option>				  
+			</select><br>
+		</div>
+		<div class="modal-footer">
 			<input type='submit' onclick="button_event();" value="DONATION" >  		<br>
+		</div>
 </form>  
 </div>
 
 
 
 <div id="modal-wrapper5" class="modal" >
-  <form class="modal-content animate" method="post" style="text-align:center;>        
-      <div class="imgcontainer">	
-	  <span onclick="document.getElementById('modal-wrapper5').style.display='none'" class="close" 
-	  title="Close PopUp">&times;</span>
-      <h1 style="text-align:center">A few days</h1>	  
+  <form class="modal-content animate" method="post" style="text-align:center;">
+	     <span onclick="document.getElementById('modal-wrapper5').style.display='none'" class="close" 
+     title="Close PopUp">&times;</span>
+      <div class="modal-header">
+	  <img src="goodneighbors.png" />  <br>
+	  </div>
 		<script type="text/javascript">
 <!--
 function button_event(){
 if (confirm("기부하시겠습니까??") == true){    //확인
+    location.href='insert.php'
 }else{   //취소
-    return;
+    location.href='members.php'
 }
 }
 //-->
 </script>
+	<div class="modal-body">
+	<h3> 아이템을 선택해 주세요 </h3>
+		<input type="radio" name="item" id="item7" value="7" onclick="itemFunction3()"> 국내아동지원 &nbsp;&nbsp;&nbsp;
+		<input type="radio" name="item" id="item8" value="8" onclick="itemFunction3()"> 북한아동지원사업 &nbsp;&nbsp;&nbsp;
+		<input type="radio" name="item" id="item9" value="9" onclick="itemFunction3()"> 해외아동교육지원 <br>
+		<dl id="7" style="text-align:right; display:none">
+			<dt>기초 보건 시스템 강화</dt>
+			<dd>- 각국 정부에게 기술 및 재정전략 지원, 필수 의료장비 지원, 보건인력 훈련 지원 등</dd>
+			<dt>예방접종 사업</dt>
+			<dd>- 홍역, 소아마비, 풍진, 파상풍을 근절하기 위해 백신을 보급하고<br> 1회용 안전주사기와 백신보관용 냉장고 지원</dd>
+		</dl>
+		<img src="item3-1.jpg" id="image7" style="display:none">
 		
+		<dl id="8" style="text-align:right; display:none">
+			<dt>전 세계 약 12만 명의 어린이들이 에이즈 관련 질병으로 사망하였습니다.</dt>
+			<dd>- 에이즈는 아프리카 청소년들의 사망원인 1위이며</dd>
+			<dd>- 전 세계 청소년의 사망원인 2위입니다. </dd>
+			<dt>감염 예방 방지</dt>
+			<dd>- HIV에 감염된 임산부와 수유부의 76%가 적절한 치료•예방 프로그램을 제공받았습니다.</dd>
+		</dl>
+		<img src="item3-2.jpg" id="image8" style="display:none">
+		
+		<dl id="9" style="text-align:right; display:none">
+			<dt>안전하지 못한 식수는 어린이들의 생존과 건강에 위협이 됩니다.</dt>
+			<dd>- 설사병과 전염병, 기생충으로 인한 질병의 위험에 노출되어 있습니다.</dd>
+			<dd>- 성장에 큰 손실을 주며 발육부진의 원인이 됩니다. </dd>
+			<dt>안전한 식수 공급</dt>
+			<dd>- 유니세프는 더 많은 사람들이 안전한 식수에 접근할 수 있게끔 안전한 <br>수자원을 찾아서 우물과 펌프를 보급하고 있습니다.</dd>
+		</dl>
+		<img src="item3-3.jpg" id="image9" style="display:none">
+<script>
+function itemFunction3(){
+    var radio1 = document.getElementById("item7"); //input id로
+    var radio2 = document.getElementById("item8"); //input id로
+    var radio3 = document.getElementById("item9"); //input id로
+	var image1 = document.getElementById("image7");
+	var image2 = document.getElementById("image8");
+	var image3 = document.getElementById("image9");
+    var text1 = document.getElementById("7"); //p id로
+    var text2 = document.getElementById("8"); //p id로
+    var text3 = document.getElementById("9"); //p id로
+    if (radio1.checked == true){
+        text1.style.display = "block";
+		text2.style.display = "none";
+		text3.style.display = "none";
+		image1.style.display = "block";
+		image2.style.display = "none";
+		image3.style.display = "none";
+    } if (radio2.checked == true) {
+        text2.style.display = "block";
+		text1.style.display = "none";
+		text3.style.display = "none";
+		image1.style.display = "none";
+		image2.style.display = "block";
+		image3.style.display = "none";
+    } if (radio3.checked==true) {
+        text3.style.display = "block";
+		text1.style.display = "none";
+		text2.style.display = "none";
+		image1.style.display = "none";
+		image2.style.display = "none";
+		image3.style.display = "block";
+	}
+}
+</script>
 			2차 비밀번호 :
 			<input type='text' name='uid' style="text-align:center; width:160px; height:10px; letter-spacing: 0px"><br>			
 			 donation :			
-			<select id="dona" name="price">                      
+			<select id="dona" name="price">
 			  <option value="0">--select donation--</option>
 			  <option value="100">100원</option>
 			  <option value="500">500원</option>
 			  <option value="1000">1000원</option>				  
 			  <option value="2000">2000원</option>				  
 			</select><br>
+			</div>
+			<div class="modal-footer">
 			<input type='submit' onclick="button_event();" value="DONATION" >  		<br>
+			</div>
 </form>  
 </div>
 <!-- Container (Contact Section) -->

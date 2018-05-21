@@ -10,7 +10,7 @@
 	$pre_total=0;
 	if(!isset($_POST['submit'])) {
 		//$query = "SELECT * FROM test_join";
-
+		$item = $_POST['item'];
 		$Price= $_POST['price'];
 		$User_uid= $_POST['uid'];
 		
@@ -28,8 +28,8 @@
 		
 		$modi_total = $pre_total-$Price;
 		
-		$mysql_qry2  = "INSERT INTO `users` (`num`, `name`, `sex`, `bday`, `username`, `password`, `email`, `spend`, `total`, `uid`, `date`) 
-		VALUES (NULL, '', NULL, NULL, '$username', '', '', '$Price', '$modi_total', '$User_uid', now())";
+		$mysql_qry2  = "INSERT INTO `users` (`num`, `name`, `sex`, `bday`, `username`, `password`, `email`, `spend`, `total`, `uid`, `date`, `location`) 
+		VALUES (NULL, '', NULL, NULL, '$username', '', '', '$Price', '$modi_total', '$User_uid', now(), '$item')";
 
 		if($pre_total - $Price >= 0){
 			mysqli_query($con,$mysql_qry2);

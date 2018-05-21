@@ -103,7 +103,7 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
   }
   .panel-heading {
       color: #fff !important;
-      background-color: #f4511e !important;
+      background-color: #ffffff !important;
       padding: 25px;
       border-bottom: 1px solid transparent;
       border-top-left-radius: 0px;
@@ -487,15 +487,25 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h1>A few days</h1>
+          <img src="unicef.png">
         </div>
         <div class="panel-body">
-          <p><i class="fa fa-medkit"></i>&nbsp;<strong>의료</strong> 지원</p>
-          <p><i class="fa fa-home"></i>&nbsp;<strong>생활</strong> 지원</p>
-          <p><span class="glyphicon glyphicon-cutlery"></span>&nbsp;<strong>급식</strong> 지원</p>
+          <p>어린이를 위한 유니세프 사업전략 <br>
+         유니세프는 어린이가 살기 좋은 세상을 만들기 위해<br>
+다음 7가지 사업분야에 중점을 두고 사업을 펼쳐 나갑니다.<br><br>
+<strong><i class="fa fa-medkit"></i>&nbsp; 보건사업전개</strong><br>
+<strong><span class="glyphicon glyphicon-leaf"></span>&nbsp; 에이즈 감염 감소</strong><br>
+<strong><i class="fa fa-tint"></i>&nbsp; 식수와 위생 개선</strong><br>
+<strong><span class="glyphicon glyphicon-cutlery"></span>&nbsp; 영양 실조율 감소</strong><br>
+<strong><span class="glyphicon glyphicon-education"></span>&nbsp;교육 환경 개선</strong><br>
+<strong><span class="glyphicon glyphicon-user"></span>어린이 보호</strong><br>
+<strong><i class="fa fa-universal-access"></i>&nbsp; 사회통합</strong><br>      
+         </p>
+  <a href="http://www.unicef.or.kr/">http://www.unicef.or.kr/</a>
+
         </div>
         <div class="panel-footer">
-          <h3>$19</h3>
+          <h3>후원하기</h3>
           <button class="btn btn-lg" onclick="document.getElementById('modal-wrapper3').style.display='block'">Check</button>
         </div>
       </div>      
@@ -503,16 +513,24 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h1>Weeks</h1>
+          <img src="world_vision_logo.png" width="150px" height="50px"/>
         </div>
         <div class="panel-body">
-          <p><i class="fa fa-medkit"></i>&nbsp;<strong>의료</strong> 지원</p>
-          <p><i class="fa fa-wheelchair"></i>&nbsp;<strong>재활치료</strong> 지원</p>
-          <p><i class="fa fa-home"></i>&nbsp;<strong>생활</strong> 지원</p>
-          <p><span class="glyphicon glyphicon-cutlery"></span>&nbsp;<strong>급식</strong> 지원</p>
+        <p>월드비전은 전세계 가장 취약한 아동,가정,지역사회가<br>
+		빈곤과 불평등에서 벗어나도록 하나님의 사랑을 실천하고 <br>
+		모든 파트너와 함께 지속 가능한 변화를 만들어가는 글로벌 NGO입니다<br><br>
+
+      3대 사업을 중심으로 일합니다.<br>
+      <strong><span class="glyphicon glyphicon-wrench"></span>&nbsp;지역개발사업</strong> <br>
+      <strong><i class="fa fa-medkit"></i>&nbsp;국제구호사업</strong>  <br>
+      <strong><span class="glyphicon glyphicon-education"></span>&nbsp;옹호사업</strong>
+
+      </p>
+      <a href="http://www.worldvision.or.kr/index.asp">http://www.worldvision.or.kr/index.asp</a>
+
         </div>
         <div class="panel-footer">
-          <h3>$29</h3>
+          <h3>후원하기</h3>
           <button class="btn btn-lg" onclick="document.getElementById('modal-wrapper4').style.display='block'">Check</button>
         </div>
       </div>      
@@ -520,17 +538,24 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h1>Months</h1>
+          <img src="goodneighbors.png"/>
         </div>
         <div class="panel-body">
-          <p><i class="fa fa-medkit"></i>&nbsp;<strong>의료</strong> 지원</p>
-          <p><i class="fa fa-wheelchair"></i>&nbsp;<strong>재활치료</strong> 지원</p>
-          <p><i class="fa fa-home"></i>&nbsp;<strong>생활</strong> 지원</p>
-          <p><span class="glyphicon glyphicon-cutlery"></span>&nbsp;<strong>급식</strong> 지원</p>
-          <p><i class="fa fa-mortar-board"></i>&nbsp;<strong>교육</strong> 지원</p>
+          <p>굿네이버스는 총 35개국 191개 지역에서<br>
+		  지역개발사업(CDP, Community Development Project)을 지원하고 있습니다.<br>
+         굿네이버스는 1991년 한국에서 설립된 대한민국 토종 NGO입니다.<br>
+         8명의 창립멤버와 128명의 정회원으로 시작해, 현재 국내 52개 지부, 
+		 <br>해외 38개국에서 세상을 위한 좋은 변화를 만들어 나가고 있습니다.<br>
+         <br>
+         <strong><span class="glyphicon glyphicon-leaf"></span>&nbsp;국내복지사업</strong><br>
+         <strong><i class="fa fa-medkit"></i>&nbsp;국제구호개발사업</strong><br>
+         <strong><span class="glyphicon glyphicon-education"></span>&nbsp;사회개발교육사업</strong><br>   
+		</p>
+         <a href="http://www.goodneighbors.kr/">http://www.goodneighbors.kr/</a>
+
         </div>
         <div class="panel-footer">
-          <h3>$49</h3>
+          <h3>후원하기</h3>
           <button class="btn btn-lg" onclick="document.getElementById('modal-wrapper5').style.display='block'">Check</button>
         </div>
       </div>      
