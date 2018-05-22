@@ -302,7 +302,7 @@ article {
   padding-left: 30%;
   padding-bottom: 5%;
   max-width: auto;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid lightgray;
 }
 
 .grid-container > div {
@@ -325,7 +325,7 @@ ul.menu{
     width: 10%;
     background-color: #ffffff;
     position: absolute;
-    height: 50%;
+    height: 20%;
     overflow: auto;
 }
 
@@ -365,7 +365,6 @@ li a:hover:not(.active) {
 			<button class="dropbtn"><?=$username?>님 환영합니다.</button>
 			<div class="dropdown-content">
 				<a href="info.php">Info</a>
-				<a href="#">My Status</a>
 				<a href="logout.php">Logout</a>
 				</div>
 		</div>
@@ -384,11 +383,7 @@ li a:hover:not(.active) {
   <li><a href="info.php">나의 후원 내역</a></li>
   <hr style="border:1px solid red; width=90%"> 
   <li style="background-color: #f4511e;"><a href="account.php">계좌 정보</a></li>
-  <hr style="border:1px solid red; width=90%"> 
-  <li><a href="#Q&A">Q&A</a></li>
-  <hr style="border:1px solid red; width=90%"> 
-  <li><a href="#about">About</a></li>
-  <hr style="border:1px solid red; width=90%"> 
+  <hr style="border:1px solid red; width=90%">
 </ul>
 
 
@@ -437,10 +432,10 @@ for($total_rows2 = mysqli_num_rows($result)-1; $total_rows2 > 0 ; $total_rows2--
 	$total=0;
 	while($row=mysqli_fetch_array($exec)){
 		if($row['income']!=null){
-		$income = $income + $row[7];
+		$income = $income + $row['income'];
 		}
 		if($row['spend']!=null){
-		$spend = $spend + $row[8];
+		$spend = $spend + $row['spend'];
 		}
 	}
 	$total_rows = mysqli_num_rows($exec);
@@ -544,7 +539,7 @@ window.onclick = function(event) {
     }
 }
 </script>
-
+</div>
 
 </body>
 </html>

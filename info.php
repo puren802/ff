@@ -365,7 +365,6 @@ li a:hover:not(.active) {
 			<button class="dropbtn"><?=$username?>님 환영합니다.</button>
 			<div class="dropdown-content">
 				<a href="info.php">Info</a>
-				<a href="#">My Status</a>
 				<a href="logout.php">Logout</a>
 				</div>
 		</div>
@@ -384,10 +383,6 @@ li a:hover:not(.active) {
   <li style="background-color: #f4511e; padding-top:15px"><a style="color: white;">나의 후원 내역</a></li>
   <hr style="border:1px solid red; width=90%"> 
   <li><a href="account.php">계좌 정보</a></li>
-  <hr style="border:1px solid red; width=90%"> 
-  <li><a href="#Q&A">Q&A</a></li>
-  <hr style="border:1px solid red; width=90%"> 
-  <li><a href="#about">About</a></li>
   <hr style="border:1px solid red; width=90%"> 
 </ul>
 
@@ -442,7 +437,7 @@ while($row2['spend']==null);
 	$total=0;
 	while($row=mysqli_fetch_array($result)){
 		if($row['spend']!=null){
-		$total = $total + $row[8];
+		$total = $total + $row['spend'];
 		}
 	}
 	echo $total;
@@ -515,7 +510,7 @@ window.onclick = function(event) {
     }
 }
 </script>
-
+</div>
 
 </body>
 </html>

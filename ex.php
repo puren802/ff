@@ -9,7 +9,6 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
 <html lang="en">
 <head>
   <title>Bit Company Page</title>
-</head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -48,7 +47,7 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
       padding: 60px 50px;
   }
   .bg-grey {
-      background-color: #f6f6f6;
+      background-color: #efefef;
   }
   .logo-small {
       color: #f4511e;
@@ -238,9 +237,9 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
     cursor: pointer;
 }
   
+</style>
 
-  
-  </style>
+</head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -256,8 +255,8 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#about">ABOUT</a></li>
-        <li><a href="#services">SERVICES</a></li>
         <li><a href="#support">SUPPORT</a></li>
+        <li><a href="#services">SERVICES</a></li>
         <li><a href="#donation">DONATION</a></li>
         <li><a href="#contact">CONTACT</a></li>
 		<li><a href="#login" onclick="document.getElementById('modal-wrapper1').style.display='block'">LOGIN</a></li>
@@ -373,9 +372,38 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
   </div>
 </div>
 
+
+<!-- Container (support Section) -->
+<div id="support" class="container-fluid text-center">
+    <h2>support</h2><br>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="sup1.jpg">
+        <p><strong>세계 어린이 후원</strong></p>
+        <p>전 세계 도움이 필요한 어린이들이 건강하게 자라고 안전하게 살 수 있도록 지원합니다.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="sup2.jpg">
+        <p><strong>난민 어린이 후원</strong></p>
+        <p>자연재해, 전쟁으로 집을 잃고 생활하는 난민 어린이를 지원합니다.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="sup3.jpg">
+        <p><strong>에이즈감염어린이 후원</strong></p>
+        <p>에이즈로 부모를 잃은 어린이를 보호하고 모자감염 예방과 치료를 지원합니다.</p>
+      </div>
+    </div>
+  </div><br>
+</div>
+
 <!-- Container (Services Section) -->
-<div id="services" class="container-fluid text-center">
-  <h2>SERVICES</h2>
+<div id="services" class="container-fluid text-center bg-grey">
+<h2>SERVICES</h2>
   <!--<h4>What we offer</h4>-->
   <br>
   <div class="row slideanim">
@@ -413,35 +441,7 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
       <p>work hard for better life</p>
     </div>
   </div>
-</div>
-
-<!-- Container (Portfolio Section) -->
-<div id="support" class="container-fluid text-center bg-grey">
-  <h2>support</h2><br>
-  <!--<h4>What we have created</h4>-->
-  <div class="row text-center slideanim">
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="sup1.jpg">
-        <p><strong>세계 어린이 후원</strong></p>
-        <p>전 세계 도움이 필요한 어린이들이 건강하게 자라고 안전하게 살 수 있도록 지원합니다.</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="sup2.jpg">
-        <p><strong>난민 어린이 후원</strong></p>
-        <p>자연재해, 전쟁으로 집을 잃고 생활하는 난민 어린이를 지원합니다.</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="sup3.jpg">
-        <p><strong>에이즈감염어린이 후원</strong></p>
-        <p>에이즈로 부모를 잃은 어린이를 보호하고 모자감염 예방과 치료를 지원합니다.</p>
-      </div>
-    </div>
-  </div><br>
+  <br><br><br>
   
    <h2>What our customers say</h2>
   <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
@@ -477,7 +477,7 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
   </div>
 </div>
 
-<!-- Container (Pricing Section) -->
+<!-- Container (donation Section) -->
 <div id="donation" class="container-fluid">
   <div class="text-center">
     <h2>Donation</h2>
@@ -639,6 +639,7 @@ $con = mysqli_connect('localhost', 'root', 'qwerqwer', 'arduino');
 
 <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid bg-grey">
+<div id="contact" class="container-fluid bg-grey">
   <h2 class="text-center">CONTACT</h2>
   <div class="row">
     <div class="col-sm-5">
@@ -716,7 +717,6 @@ window.onclick = function(event) {
     }
 }
 </script>
-
 
 </body>
 </html>

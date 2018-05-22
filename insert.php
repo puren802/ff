@@ -28,10 +28,11 @@
 		
 		$modi_total = $pre_total-$Price;
 		
-		$mysql_qry2  = "INSERT INTO `users` (`num`, `name`, `sex`, `bday`, `username`, `password`, `email`, `spend`, `total`, `uid`, `date`, `location`) 
-		VALUES (NULL, '', NULL, NULL, '$username', '', '', '$Price', '$modi_total', '$User_uid', now(), '$item')";
-
-		if($pre_total - $Price >= 0){
+		$mysql_qry2="INSERT INTO `users` (`num`, `name`, `username`, `password`, `email`, `income`,
+		`spend`, `total`, `uid`, `date`, `location`) VALUES 
+		(NULL, '', '$username', '', '', '', '$Price', $modi_total, '$uid', CURRENT_TIMESTAMP, '')";
+	
+	if($pre_total - $Price >= 0){
 			mysqli_query($con,$mysql_qry2);
 			echo "<script>alert('기부 완료!');
 			window.location.replace('members.php');
